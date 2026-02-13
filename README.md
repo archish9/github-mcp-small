@@ -1,4 +1,4 @@
-# GitHub MCP Server
+# VersionControlHelperMCP
 
 A **Model Context Protocol (MCP)** server providing version control operations as tools for AI coding agents. Built specifically for integration with LangChain deepagents and other MCP-compatible LLM workflows.
 
@@ -28,8 +28,8 @@ This MCP server exposes **Git version control operations** as structured tools t
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-repo/github-mcp-small.git
-cd github-mcp-small
+git clone https://github.com/your-repo/VersionControlHelperMCP.git
+cd VersionControlHelperMCP
 
 # Install dependencies with uv
 uv sync
@@ -44,7 +44,7 @@ uv sync
 For local usage with LangChain or other MCP clients:
 
 ```bash
-uv run github-mcp
+uv run version-control-helper-mcp
 ```
 
 ### With Default Repository Path
@@ -52,7 +52,7 @@ uv run github-mcp
 Set `REPO_PATH` to avoid passing `repo_path` in every tool call:
 
 ```bash
-REPO_PATH=/path/to/your/project uv run github-mcp
+REPO_PATH=/path/to/your/project uv run version-control-helper-mcp
 ```
 
 ### Development/Debugging
@@ -60,7 +60,7 @@ REPO_PATH=/path/to/your/project uv run github-mcp
 Use the MCP inspector for testing:
 
 ```bash
-uv run mcp dev src/github_mcp/server.py
+uv run mcp dev src/version_control_helper_mcp/server.py
 ```
 
 ---
@@ -360,9 +360,9 @@ This server provides **10 tools** for complete version control workflows.
 ## Architecture
 
 ```
-github-mcp-small/
+VersionControlHelperMCP/
 ├── pyproject.toml           # UV project configuration
-├── src/github_mcp/
+├── src/version_control_helper_mcp/
 │   ├── __init__.py
 │   ├── server.py            # MCP server entry point
 │   ├── tools.py             # Tool implementations
